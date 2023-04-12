@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Skin Cancer Culminating</title>
+	<script src="https://kit.fontawesome.com/56d56ef2f8.js">
+
+	</script>
+	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js">
+
+	</script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <style>
+.rowo {
+  column-count: 2;
+  column-gap: 40px;
+}
+.body{
+    width:95%;
+  margin: auto;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}html {
+  height: 100%;
+  width: 100%;
+}
+
+</style>
+</head>
+<style>
+    body{text-align: center;}
+</style>
+<body class="has-navbar-fixed-top body" class="body">
+<nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="/">
+				<!-- Change logo image and image dimensions -->
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-start">
+          <!-- Add links to these items -->
+            <a class="navbar-item" datascroll href="https://colinwolfe.coho905.repl.co/">
+            Homepage
+          </a>
+
+          <a class="navbar-item" datascroll href="/thoreau.html">
+            Skin Cancer
+          </a>
+
+          <a class="navbar-item" datascroll href="/emerson.html">
+            Translator
+          </a>
+          <a class="navbar-item" datascroll href="/inde.html">
+            Breast Cancer
+          </a>
+        </div>
+      </div>
+    </nav>
+  <script src="script.js"></script>
+<h1 class="title is-size-4-mobile is-size-1-desktop body" style="align:center;">Upload an image</h1>
+<br><br>
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="weight1">
+
+    <br/>
+
+    <input type="submit" value="Upload">
+</form>
+<h4 style="color:red">Prediction: {{ msg }}</h4>
+<h4 style="color:red">Confidence Level: {{ msg1 }}</h4>
+ <!--<img src="{{user_image}}" height="240px" width="300px"> -->
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
