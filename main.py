@@ -1,6 +1,3 @@
-
-
-
 from flask import Flask, render_template, request
 from PIL import Image
 import numpy as np
@@ -17,30 +14,12 @@ app = Flask(__name__)
 from flask import Flask, render_template, request, session
 import os
 from werkzeug.utils import secure_filename
-
-# *** Backend operation
-
-
-from flask import Flask, render_template, request
-from PIL import Image
-import numpy as np
-from fastai.vision.all import *
-import pickle
-import glob
-import joblib
-from flask import Flask, render_template, request
-from PIL import Image
-import numpy as np
-from fastai.vision.all import *
-import pickle
-import glob
-import joblib
 import pathlib
 temp = pathlib.PosixPath
 pathlib.PosixPath = pathlib.WindowsPath
 
 
-path = r'C:/Users/Coho9/Downloads/archive (5)/train'
+path = r'PATH to the folder with your images'
 benign_images = get_image_files(path + "benign")
 malignant_images = get_image_files(path + "malignant")
 len(malignant_images)
@@ -49,28 +28,13 @@ fnames = get_image_files(path)
 
 def label_func(x): return x.parent.name
 
-
-path = r'C:/Users/Coho9/Downloads/archive (5)/train'
-benign_images = get_image_files(path + "benign")
-malignant_images = get_image_files(path + "malignant")
-len(malignant_images)
-fnames = get_image_files(path)
-
-
-def label_func(x): return x.parent.name
-
-def load_model():
-  path = r'C:/Users/Coho9/Downloads/model.pkl'
-  learn = load_learner(path, 'model.pkl')
-  return learn
-
-path = r'C:/Users/Coho9/Downloads/model.pkl'
+path = r'path to model'
 path = Path(path)
 learn_inf = load_learner(path)
 
 # WSGI Application
 # Defining upload folder path
-UPLOAD_FOLDER = os.path.join('staticFiles', 'uploads')
+#UPLOAD_FOLDER = os.path.join('staticFiles', 'uploads')
 # # Define allowed files
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
@@ -78,7 +42,7 @@ ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 # The default folder name should be "templates" else need to mention custom folder name for template path
 # The default folder name for static files should be "static" else need to mention custom folder for static path
 # Configure upload folder for Flask application
-app.config['UPLOAD_FOLDER'] = r'C:/Users/Coho9/PycharmProjects/skinCancerCulminating/Static/'
+app.config['UPLOAD_FOLDER'] = r'path to upload photo'
 
 
 # Define secret key to enable session
@@ -116,7 +80,6 @@ def home():
         prob3 = prob3.replace(")", "")
         con_level = prob3
         prediction = pred
-
     else:
         prediction = ""
         con_level = ''
@@ -129,9 +92,3 @@ def home():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
-
-
-
