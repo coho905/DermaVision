@@ -1,6 +1,6 @@
 # DermaVision 
 
-## This Project was for my senior year capstone culminating project @ the Commonwealth Governor's School. 
+## My senior year capstone culminating project @ the Commonwealth Governor's School. 
 </br> I trained a ResNet 18 on ~1000 images of skin cancer tumors. 
 </br> I used a flask server host to allow for image uploads on localhost (though would obviously be cloud compatible and production ready with gunicorn/nginx - I just don't have the funds). 
 
