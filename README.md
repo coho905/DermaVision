@@ -11,7 +11,7 @@
 4. Recieve prediction and confidence level on each selected photo
 
 ## To run it
-- Upload all of the paths (model path, upload path, path to photos (required to load the model with weights for some reason)
+- Update all of the paths for your machine (model path, upload path, path to photos (required to load the model with weights for some reason)
 - Make sure the system is compatible with non-Windows OS (never had time to test it)
 
 ## Notes
